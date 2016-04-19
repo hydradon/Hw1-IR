@@ -1,0 +1,49 @@
+Replace this file with the answers to the essay questions here. (Matric no: A0099878W)
+----------------------------------------------------------------------
+
+1. In the homework assignment, we are using character-based ngrams,
+i.e., the gram units are characters. Do you expect token-based ngram
+models to perform better?
+
+Using token-based ngram will be more likely to distinguish between Tamil
+and the remaining languages while it will be not as effective when
+distinguishing between Indonesian and Malaysian. This is because indonesian
+and Malaysian share many commonw words as the two languages are similar
+and both are different from Tamil.
+
+Character-based ngrams also place importance on word order or word context
+as well because a significant number of these ngrams contain the space
+between words. Therefore character-based ngrams is better to deal with
+languages whose word order is important. For language such as German
+where a word can be placed at different places in a sentence without
+change in meaning, token-based ngrams can prove to be more effective.
+
+2. What do you think will happen if we provided more data for each
+category for you to build the language models? What if we only
+provided more data for Indonesian?
+
+More data for each category to train will definitely improve accuracy
+of prediction because the language model will know more 4grams. However,
+if the additional data do not include a diverse range of words, the
+prediction will have higher accuracy for test data that contains those
+words only.
+If more data is provided only for Indonesian, the accuracy if prediction
+of text in Indonesian will be higher than the accuracy of prediction for
+Malaysian, Tamil and Alien language.
+
+3. What do you think will happen if you strip out punctuations and/or
+numbers? What about converting upper case characters to lower case?
+
+Numbers and punctuations have no contribution in distinguish one language
+from another. Therefore, stripping text data of all those characters will
+increase the accuracy of prediction as there will no longer be any 4gram
+that contains numbers and punctuations.
+
+4. We use 4-gram models in this homework assignment. What do you think
+will happen if we varied the ngram size, such as using unigrams,
+bigrams and trigrams?
+
+If we use shorter ngrams than 4grams, the probability of each ngram in each
+language will be higher as each language will be more likely to share these
+ngrams. Therefore, the LM will not capture the "uniqueness" of each language
+and will be more likely to make false prediction.
